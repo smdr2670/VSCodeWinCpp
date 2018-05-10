@@ -6,4 +6,5 @@ First things first, [download Visual Studio Code](https://code.visualstudio.com/
 After installing the prerequisites, start Visual Studio Code and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>x</kbd> 
 to open Extensions. Download C/C++ package for Intellisense, debugging, and code browsing.  
 
-# TODO: add gif to visualize and simplify  
+![](https://media.giphy.com/media/7zSzFQluydVuZdceE4/giphy.gif)
+
