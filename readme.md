@@ -11,3 +11,21 @@ to open Extensions. Download C/C++ package for Intellisense, debugging, and code
 
 ![](https://media.giphy.com/media/7zSzFQluydVuZdceE4/giphy.gif)
 
+Do the same procedure for `Code Runner`.
+
+
+## User Settings
+Press <kbd>Ctrl</kbd>+<kbd>,</kbd> or go to File->Preferences->Settings and the User Settings will open up. Everything that you want to edit or customize will take place there. At first, we have to link VSCode with the shell of MSYS2. On windows, the integrated shell is Window Powershell. Paste the following code in to your User Settings.
+
+```
+{
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": ["-i"],
+    "terminal.integrated.env.windows": { "PATH" : "/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/"}
+}
+
+```
+
+Restart the terminal or VSCode and verify that you have bash as an integrated shell instead of Windows Powershell. 
+![](https://media.giphy.com/media/8lJP6F3Fvnuafeqlwf/giphy.gif)
