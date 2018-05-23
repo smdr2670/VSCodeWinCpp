@@ -5,18 +5,14 @@
 #include <type_traits>
 #include <utility>
  
-/*
-* Fold expressions (C++17) reduces a parameter pack over a binary operator
-*
-*/
-
+// Fold expressions (C++17) reduces a parameter pack over a binary operator
 template<typename ...Args>
 void printer(Args&&... args) {
     (std::cout << ... << args) << '\n';
 }
 
 
-// Variadic pushback using C++11 or C++14 standard, starting with base case
+// Templated variadic pushback using C++11 or C++14, starting with base case
 template <typename T>
 void push_back_vec_old(std::vector<T>& v){
 
@@ -78,15 +74,6 @@ int main()
     double mean = calcMean(3.2, 5.2, 5.,2.,1.);
     std::cout << "\nmean: " << mean << std::endl;
  
-    std::vector<int> a;
-    for(int i = 0; i< 5; i++){
-        int tmp;
-        std::cin >> tmp;
-        a.push_back(tmp);
-    }
-       
-    static_assert(all_equal(a));
-
     static_assert(all_equal(3,3,3,3,3,3));
     static_assert(!all_equal(3,4,5,6,7,8));
 
